@@ -149,7 +149,8 @@ def train():
 
     for i in range(sess.run(global_step), max_epoch):
         for j in range(21870 // batch_size):
-            print("epoch:%s, iter:%s" % (i, j))
+            if j == 0:
+                print("epoch:%s, iter:%s" % (i, j))
 
             # x_value, _ = mnist.train.next_batch(batch_size)
             # x_value = 2 * x_value.astype(np.float32) - 1
